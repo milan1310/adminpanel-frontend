@@ -1,0 +1,50 @@
+:root{
+    --main-color:#5042aa;
+    --table-stripe-color:#657aab;
+}
+
+.item_centet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.item_centet > div {
+    width: 80%;
+}
+
+.bg-main{
+    background: var(--main-color);
+}
+
+.full-width-btn{
+    width: 100%;
+    display: block;
+}
+
+.overflow-sidebar{
+    height: fit-content;
+    position: sticky;
+    top: 0;
+}
+
+.chart-container{
+    height: 300px !important;
+    width: 300px !important;
+    margin: 0 auto;
+}
+.chart-container-user{
+    height: 300px !important;
+    width: 100% !important;
+    margin: 0 auto;
+}
+.chart-container-sub{
+    height: 500px !important;
+    width: 500px !important;
+    margin: 0 auto;
+}
+
+.table {
+    --bs-table-striped-bg: var(--table-stripe-color);
+    --bs-table-border-color: grey;
+  }  

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/profile-icon.png" type="image/x-icon">
+    <title>Welcome to dashboard home</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!-- Side bar for admin -->
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-main overflow-sidebar">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="../html/home.html"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none text-light fw-bolder d-sm-inline">HTMLVALLEY</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+                        <li class="nav-item">
+                            <a href="/html/home.html" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span
+                                    class="ms-1 d-none text-white d-sm-inline">Dashboard</span>
+                            </a>
+                        </li>
+                        <!-- vendor -->
+                        <li>
+                            <a href="/html/vendor.html" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span
+                                    class="ms-1 d-none text-white d-sm-inline">Vendors</span> </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../img/profile-icon.png" alt="hugenerd" width="30" height="30"
+                                class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">loser</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="../html/login.html">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Main content goes here -->
+            <div class="col py-3">
+                <div class="container">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addVendor">
+                        Add new vendor
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="addVendor" tabindex="-1" aria-labelledby="addVendorLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="addVendorLabel">Fill details to add vendor</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <input type="text" class="form-control mt-2 border-bottom border-2 border-top-0 border-end-0 border-start-0 border-success" name="" id="name" placeholder="Enter your Name here">
+                                        <input type="email" class="form-control mt-2 border-bottom border-2 border-top-0 border-end-0 border-start-0 border-success" name="" id="email" placeholder="Enter your Email here">
+                                        <input type="tel" class="form-control mt-2 border-bottom border-2 border-top-0 border-end-0 border-start-0 border-success" name="" id="phone" placeholder="Enter your phone number here">
+                                        <input type="text" class="form-control mt-2 border-bottom border-2 border-top-0 border-end-0 border-start-0 border-success" name="" id="business" placeholder="Enter your Business Name here">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" id="close-btn"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success" id="save-vendor">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Table of vandor list -->
+                    <table class="table table-striped table-hover table-light mt-4">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Business</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbodyadd">
+                            <tr>
+                                <td scope="col"><img src="../img/profile-icon.png" style="width: 20px; border-radius: 50px;"></td>
+                                <td>Milan</td>
+                                <td>milan@gmail.com</td>
+                                <td>99510717459</td>
+                                <td>HTMLVALLEY </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="../js/vendor.js"></script>
+</body>
+
+</html>
